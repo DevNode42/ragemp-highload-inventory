@@ -1,0 +1,21 @@
+{
+  "name": "ragemp-highload-inventory",
+  "version": "1.0.0",
+  "description": "Highload anti-dupe inventory engine with flat TypedArray memory layout, MariaDB write-behind batcher, and ClickHouse MergeTree telemetry",
+  "main": "src/core/inventory-engine.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "bench": "npx esbuild src/benchmarks/dupe-and-throughput.ts --bundle --platform=node --format=cjs | node --expose-gc"
+  },
+  "keywords": ["ragemp", "typescript", "highload", "mariadb", "clickhouse", "inventory"],
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2"
+  }
+}
